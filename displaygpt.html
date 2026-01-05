@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Storytelling Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+
+            /* make the form a flex container */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* space between fields */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* space between label + input/textarea/select */
+        }
+
+        label {
+            font-weight: bold;
+            display: block; /* ensures label is above input */
+        }
+
+        textarea, select {
+            display: block; /* ensures full width */
+            width: 100%;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            align-self: flex-start; /* button aligns to left */
+        }
+
+        button:hover {
+            background-color: #574fe0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+
+        <label for="story">Your Story:</label>
+        <textarea id="story" name="story" rows="10px" cols="40px"></textarea>
+
+        <label for="rating">Rate the Story:</label>
+        <select id="rating" name="rating">
+            <option value="">-- Select Rating --</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent">Excellent</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
